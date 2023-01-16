@@ -429,7 +429,7 @@ pigeon = new PigeonIMU(4);
     public void driveWithJoystick(Joystick driveJoystick) {
         double y = driveJoystick.getY();
         double twist = driveJoystick.getZ();
-        drive.arcadeDrive(-(y), -(twist), true);
+        drive.arcadeDrive(-(y), (twist), true);
     }
 
 }
