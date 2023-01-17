@@ -1,5 +1,17 @@
 {
   "HALProvider": {
+    "Other Devices": {
+      "Talon SRX[12]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[9]": {
+        "header": {
+          "open": true
+        }
+      }
+    },
     "Solenoids": {
       "10": {
         "header": {
@@ -15,7 +27,8 @@
     "types": {
       "/FMSInfo": "FMSInfo",
       "/SmartDashboard/Auto Mode": "String Chooser",
-      "/SmartDashboard/Autonomous Command": "Command"
+      "/SmartDashboard/Autonomous Command": "Command",
+      "/SmartDashboard/intake": "Command"
     }
   }
 }
