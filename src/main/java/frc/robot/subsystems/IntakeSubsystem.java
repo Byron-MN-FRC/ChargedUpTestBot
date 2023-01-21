@@ -70,8 +70,8 @@ right = new WPI_TalonSRX(12);
     // here. Call these from Commands.
     public void enableMotors(boolean motorOn) {
         if (motorOn == true) {
-            left.set(0.25);
-            right.set(-0.25);
+            left.set(-0.25);
+            right.set(0.25);
         } else {
             left.set(0);
             right.set(0);
