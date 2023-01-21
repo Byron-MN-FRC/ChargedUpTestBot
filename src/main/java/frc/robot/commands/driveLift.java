@@ -56,7 +56,7 @@ public class driveLift extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        m_lift.liftWithJoystick(RobotContainer.getInstance().getJoystick2());
+        m_lift.liftWithJoystick(RobotContainer.getInstance().getjoystick2());
     }
 
     // Called once the command ends or is interrupted.
