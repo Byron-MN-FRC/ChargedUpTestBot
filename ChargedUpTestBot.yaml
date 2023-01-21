@@ -126,7 +126,7 @@ Children:
           validators: [Solenoid]
           value: '7'
       Base: Double Solenoid
-      Name: clawControl
+      Name: grabber
     Properties:
       Send to SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Send to SmartDashboard, validators: null, value: false}
@@ -237,7 +237,7 @@ Children:
           name: Command
           type: Command
           validators: &id008 [TypeDropdownSelected]
-          value: ToggleClaw
+          value: toggleClaw
         Timeout: !!robotbuilder.data.properties.PositiveDoubleProperty {default: 0,
           name: Timeout, validators: null, value: 0.0}
         Add Timeout: !!robotbuilder.data.properties.BooleanProperty {default: false,
@@ -249,7 +249,7 @@ Children:
           validators: null
           value: onTrue
       Base: Joystick Button
-      Name: button1ToggleClaw
+      Name: bttnToggleClaw
     - Children: []
       Properties:
         Interruptible: !!robotbuilder.data.properties.ChoicesProperty
@@ -379,7 +379,7 @@ Children:
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
     Base: Command
-    Name: ToggleClaw
+    Name: toggleClaw
   - Children: []
     Properties:
       Autonomous Selection: !!robotbuilder.data.properties.BooleanProperty {default: false,
@@ -416,10 +416,10 @@ Children:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: lift}
       Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id012 []
+        default: []
         name: Parameter presets
         validators: null
-        value: *id012
+        value: []
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
     Base: Command
