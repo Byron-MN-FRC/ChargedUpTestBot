@@ -8,31 +8,38 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package frc.robot;
 
 import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
 
 /**
- * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
- * constants.  This class should not be used for any other purpose.  All constants should be
- * declared globally (i.e. public static).  Do not put anything functional in this class.
+ * The Constants class provides a convenient place for teams to hold robot-wide
+ * numerical or boolean
+ * constants. This class should not be used for any other purpose. All constants
+ * should be
+ * declared globally (i.e. public static). Do not put anything functional in
+ * this class.
  *
- * <p>It is advised to statically import this class (or one of its inner classes) wherever the
+ * <p>
+ * It is advised to statically import this class (or one of its inner classes)
+ * wherever the
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
 
     static public final class DriveConstants {
-   /* public static final int kLeftMotor1Port = 0;
-       public static final int kLeftMotor2Port = 1;
-       public static final int kRightMotor1Port = 2;
-       public static final int kRightMotor2Port = 3;
-       */
+        /*
+         * public static final int kLeftMotor1Port = 0;
+         * public static final int kLeftMotor2Port = 1;
+         * public static final int kRightMotor1Port = 2;
+         * public static final int kRightMotor2Port = 3;
+         */
         // Current limiting
         public static final boolean kEnableCurrentLimiting_DT = true;
-        public final static double kAmpLimit_DT = 40; public static final String kAmpLimitName_DT = "test/drive/Amp Limit";
-        public final static double kAmpPeak_DT = 60; public static final String kAmpPeakLimitName_DT = "test/drive/Amp Peak Limit";
+        public final static double kAmpLimit_DT = 40;
+        public static final String kAmpLimitName_DT = "test/drive/Amp Limit";
+        public final static double kAmpPeak_DT = 60;
+        public static final String kAmpPeakLimitName_DT = "test/drive/Amp Peak Limit";
         public static final double kthreshholdTime = 0;
         // PID
         public final static Gains kGains_Distanc = new Gains(0.1, 0.0, 0.0, 0.0, 100, 0.50);
@@ -54,44 +61,40 @@ public class Constants {
         public final static int kSlot_Distanc = SLOT_0;
         public final static int kSlot_Turning = SLOT_1;
         public final static int kSlot_Velocit = SLOT_2;
-        public final static int kSlot_MotProf = SLOT_3;  
- 
-        public static final double encodeUnitsToFeet = -22684.24;//Real robot
+        public final static int kSlot_MotProf = SLOT_3;
+
+        public static final double encodeUnitsToFeet = -22684.24;// Real robot
         public final static int kPigeonUnitsPerRotation = 8192;
         public final static double kNeutralDeadband = 0.001;
 
-
-        // Autonomous 
+        // Autonomous
         public static final double kTrackwidthMeters = 0.60; // ??
-        public static final DifferentialDriveKinematics kDriveKinematics =
-            new DifferentialDriveKinematics(kTrackwidthMeters);
-    
-       // public static final int kEncoderCPR = 1024; 
-        public static final double kWheelDiameterMeters = 0.15; //??
-       // public static final double kEncoderDistancePerPulse =
-            // Assumes the encoders are directly mounted on the wheel shafts
-        //    (kWheelDiameterMeters * Math.PI) / (double) kEncoderCPR;
-    
-         // Values from Robot Characterization Toolsuite
+        public static final DifferentialDriveKinematics kDriveKinematics = new DifferentialDriveKinematics(
+                kTrackwidthMeters);
+
+        // public static final int kEncoderCPR = 1024;
+        public static final double kWheelDiameterMeters = 0.15; // ??
+        // public static final double kEncoderDistancePerPulse =
+        // Assumes the encoders are directly mounted on the wheel shafts
+        // (kWheelDiameterMeters * Math.PI) / (double) kEncoderCPR;
+
+        // Values from Robot Characterization Toolsuite
         public static final double ksVolts = 0.60049; // 0.22
         public static final double kvVoltSecondsPerMeter = 4.686; // 1.98
-        public static final double kaVoltSecondsSquaredPerMeter = 0.40147; //.2
-        
+        public static final double kaVoltSecondsSquaredPerMeter = 0.40147; // .2
+
         // Example value only - as above, this must be tuned for your drive!
-        public static final double kPDriveVel = .0080141; //8.5
- 
-    
-    
+        public static final double kPDriveVel = .0080141; // 8.5
+
     }
+
     public static final class AutoConstants {
         public static final double kMaxSpeedMetersPerSecond = 1;
         public static final double kMaxAccelerationMetersPerSecondSquared = .5;
-    
-        // Reasonable baseline values for a RAMSETE follower in units of meters and seconds
+
+        // Reasonable baseline values for a RAMSETE follower in units of meters and
+        // seconds
         public static final double kRamseteB = 2;
         public static final double kRamseteZeta = 0.7;
-      }
+    }
 }
-
-
-
