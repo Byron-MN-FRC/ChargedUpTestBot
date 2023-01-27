@@ -501,6 +501,9 @@ public class DriveSubsystem extends SubsystemBase {
         double pitch = pigeon.getPitch() - initialPitch;
         double roll = pigeon.getRoll() - initialRoll;
 
+        double fc = forwardController.calculate(roll,0);
+        double tc = turnController.calculate(pitch,0);
+
     }
 
 }
