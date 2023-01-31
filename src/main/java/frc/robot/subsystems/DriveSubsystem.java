@@ -493,12 +493,14 @@ public class DriveSubsystem extends SubsystemBase {
             twist = driveJoystick.getZ();
         }
         // System.out.println("y=" + y + " + twist=" + twist);
+        SmartDashboard.putNumber("z = ", twist);
+        SmartDashboard.putNumber("y = ", y);
         differentialDrive.arcadeDrive((y), -(twist), true);
     }
 
     public void autoBalanceDrive(Joystick driveJoystick) {
         forwardController.setP(.034);
-        turnController.setP(.08);
+        turnController.setP(0.16);
         double y;
         double z;
         // double y = driveJoystick.getY();
@@ -506,12 +508,12 @@ public class DriveSubsystem extends SubsystemBase {
 
         double pitch = getRoll();
         double roll = getPitch();
-        y = -forwardController.calculate(pitch, 0);
+        y = forwardController.calculate(pitch, 0);
         // pitch is current value and setpoint is desired value
         z = turnController.calculate(roll, 0);
         SmartDashboard.putNumber("z = ", z);
         SmartDashboard.putNumber("y = ", y);
-        
+
         if (pitch > 0) {
             differentialDrive.arcadeDrive(y, z);
         } else {
@@ -519,12 +521,12 @@ public class DriveSubsystem extends SubsystemBase {
         }
     }
 
-    private double getPitch(){
-        return pigeon.getPitch()-pitchOffset;
+    private double getPitch() {
+        return pigeon.getPitch() - pitchOffset;
     }
 
-    private double getRoll(){
-        return pigeon.getRoll()-rollOffset;
+    private double getRoll() {
+        return pigeon.getRoll() - rollOffset;
     }
 
 }
