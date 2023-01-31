@@ -15,9 +15,30 @@
     "types": {
       "/FMSInfo": "FMSInfo",
       "/SmartDashboard/Auto Mode": "String Chooser",
+      "/SmartDashboard/AutoBalance": "Command",
       "/SmartDashboard/Autonomous Command": "Command",
+      "/SmartDashboard/DriveSubsystem": "Subsystem",
       "/SmartDashboard/getMuchHigher": "Command",
       "/SmartDashboard/intake": "Command"
+    }
+  },
+  "NetworkTables": {
+    "Persistent Values": {
+      "open": false
+    },
+    "transitory": {
+      "LiveWindow": {
+        ".status": {
+          "open": true
+        },
+        "open": true
+      },
+      "Shuffleboard": {
+        "open": true
+      },
+      "SmartDashboard": {
+        "open": true
+      }
     }
   }
 }
