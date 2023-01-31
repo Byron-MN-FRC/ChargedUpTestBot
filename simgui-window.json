@@ -11,6 +11,11 @@
     }
   },
   "Window": {
+    "###DIO": {
+      "Collapsed": "0",
+      "Pos": "1672,318",
+      "Size": "227,95"
+    },
     "###FMS": {
       "Collapsed": "0",
       "Pos": "7,42",
@@ -43,7 +48,7 @@
     },
     "###Timing": {
       "Collapsed": "0",
-      "Pos": "580,40",
+      "Pos": "588,151",
       "Size": "188,186"
     },
     "Debug##Default": {

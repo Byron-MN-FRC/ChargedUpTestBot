@@ -1,5 +1,17 @@
 {
   "HALProvider": {
+    "DIO": {
+      "window": {
+        "visible": true
+      }
+    },
+    "Other Devices": {
+      "SPARK MAX [20]": {
+        "header": {
+          "open": true
+        }
+      }
+    },
     "Solenoids": {
       "10": {
         "header": {
@@ -18,6 +30,13 @@
       "/SmartDashboard/Autonomous Command": "Command",
       "/SmartDashboard/getMuchHigher": "Command",
       "/SmartDashboard/intake": "Command"
+    }
+  },
+  "NetworkTables": {
+    "transitory": {
+      "SmartDashboard": {
+        "open": true
+      }
     }
   }
 }
